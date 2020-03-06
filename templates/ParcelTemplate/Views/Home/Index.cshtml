@@ -3,6 +3,14 @@
 }
 
 <div class="h-full flex flex-col justify-center items-center tracking-wide">
-    <div class="text-gray-600 text-3xl font-semibold">ASP.NET + Parcel.js + Tailwind</div>
-    <div class="text-gray-500 font-normal">Boilerplate project</div>
+    <div class="text-gray-600 text-3xl font-semibold">ASP.NET Core + Parcel.js + Tailwind + Alpine.js</div>
+    <div class="text-gray-600 font-thin">Boilerplate project</div>
+    <div x-data="{ open: false}" class="relative">
+      <button x-on:click="open = true" class="mt-6 px-2 py-1 bg-green-400 text-white rounded">With Reactivity</button>
+      <ul class="absolute bg-gray-100 shadow-lg rounded-lg px-2 text-xs w-48" x-show="open" x-on:click.away="open = false">
+        <li class="text-sm px-1 py-1 font-thin">Dropdown Body</li>
+        <li class="text-sm px-1 py-1 font-thin">Dropdown Body</li>
+        <li class="text-sm px-1 py-1 font-thin">Dropdown Body</li>
+      </ul>
+    </div>
 </div>
